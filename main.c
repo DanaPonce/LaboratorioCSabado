@@ -1,10 +1,18 @@
+/*
+*Autor: Dana Elizabeth Ponce Del Agnel
+*Fecha: 08/10/19
+*Grupo: 008
+*Horario: Sabado 9am - 11 am
+*Matricula: 1868698
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char *argv[]) {
-	int ventasEmpleadoOficinaEdificio[6][10][2], i, j, f, op, ch, vi, vj, vf, Vent;
+	int ventasEmpleadoOficinaEdificio[6][10][2], i, j, f, op, ch, vi, vj, vf, Vent, cont=0;
 	
 	
 	//*******actividad1************
@@ -22,6 +30,7 @@ int main(int argc, char *argv[]) {
 						fflush(stdin);
 						scanf("%d",&ventasEmpleadoOficinaEdificio[i][j][f]);
 					}while(ventasEmpleadoOficinaEdificio[i][j][f]<0);
+				cont++;
 				}
 				do{
 					printf("Datos Correctos [1-si/2-No]"); //Puse esta validacion para asegurarme de que de que si hay algun valor incorrecto se vuelvan a inducir los datos
@@ -140,6 +149,9 @@ int main(int argc, char *argv[]) {
 			}
 		}
 	}
+	
+	printf("\n\n Hay un total de %d elementos", cont);
+	printf("\n\n Si se pide un numero que no se llenoo, debido a que puse validaciones no lo dejara avanzar, pero en caso de que si, sera un numero bastante largo o en su defecto, se imprimira un 0");
 	
 	printf("\n\n\n\n\n\n");
 	
